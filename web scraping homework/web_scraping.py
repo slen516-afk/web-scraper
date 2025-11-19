@@ -90,3 +90,4 @@ with open("product_info.json", "w",encoding="utf-8")as f:
     json.dump(data, f,ensure_ascii=False, indent=4)
 
 
+class c-pagination__link, href
