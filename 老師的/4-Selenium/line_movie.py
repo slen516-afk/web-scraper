@@ -81,4 +81,4 @@ if not os.path.exists():
 for info in all_movie_info:
     comment_info = get_all_comment(info['link'])
 
-    with open(f"movie_comment/{info['name']}")
+with open(f"movie_comment/{info['name']}")
