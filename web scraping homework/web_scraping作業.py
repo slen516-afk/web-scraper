@@ -27,12 +27,14 @@ def product(keyword):
     driver.find_element(By.CSS_SELECTOR,".o-iconFonts.o-iconFonts--actionClose").click()
     driver.find_element(By.CLASS_NAME,"c-search__input").send_keys(keyword)
     driver.find_element(By.CSS_SELECTOR,".btn__square.btn__square--primary").click()
+  
 
     phone_list = driver.find_elements(By.CSS_SELECTOR, ".c-prodInfoV2__title")
     phone_price = driver.find_elements(By.CSS_SELECTOR, ".c-prodInfoV2__priceValue.c-prodInfoV2__priceValue--m")
     buy_link = driver.find_elements(By.CSS_SELECTOR,".c-prodInfoV2__link.gtmClickV2")
     phone_img = driver.find_elements(By.CSS_SELECTOR,".c-prodInfoV2__img img")
     empty = driver.find_elements(By.CSS_SELECTOR,".c-tipsBox__textFrame.c-tipsBox__textFrame--searchTipsBox")
+    
 
 
     if empty or len(phone_list) == 0:
@@ -76,6 +78,7 @@ def product(keyword):
             "img": phone_img
 
         })
+        
     for info in all_phone_info:
         print("name:", info["name"])
         print("price:", info["price"])
@@ -90,4 +93,4 @@ with open("product_info.json", "w",encoding="utf-8")as f:
     json.dump(data, f,ensure_ascii=False, indent=4)
 
 
-class c-pagination__link, href
+
